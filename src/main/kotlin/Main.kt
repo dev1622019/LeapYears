@@ -1,5 +1,19 @@
 fun main(args: Array<String>) {
-    println("Hello world")
+    print("Enter a year: ")
+
+    readLine()?.let {
+        try {
+            val year = it.toInt()
+
+            if (year.isLeapYear()) {
+                println("The year $year is a leap year")
+            } else {
+                println("The year $year is not a leap year")
+            }
+        } catch (e: NumberFormatException) {
+            println("The input was not valid")
+        }
+    } ?: println("No input found")
 }
 
 fun Int.isLeapYear() = when {
