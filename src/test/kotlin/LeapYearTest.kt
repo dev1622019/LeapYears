@@ -10,4 +10,13 @@ class LeapYearTest {
             assertThat(it.isLeapYear()).isTrue()
         }
     }
+
+    @Test
+    fun `years divisible by 100 but not by 400 are not leap years`() {
+        val list = listOf(300, 500, 1700, 1800, 1900, 2100)
+        list.forEach {
+            assertThat(it.isLeapYear()).isFalse()
+        }
+    }
+
 }
