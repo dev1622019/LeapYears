@@ -27,4 +27,12 @@ class LeapYearTest {
         }
     }
 
+    @Test
+    fun `years not divisible by 4 are not leap years`() {
+        val list = listOf(2017, 2018, 2019, 402, 361, 2066)
+        list.forEach {
+            assertThat(it.isLeapYear()).isFalse()
+        }
+    }
+
 }
