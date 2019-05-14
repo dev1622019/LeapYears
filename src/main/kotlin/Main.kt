@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
 }
 
 fun Int.isLeapYear() = when {
+    this % 4000 == 0 -> false
     this % 400 == 0 -> true
     this % 100 == 0 -> false
     this % 4 == 0 -> true

@@ -35,4 +35,12 @@ class LeapYearTest {
         }
     }
 
+    @Test
+    fun `years divisible by 4000 are not leap years`() {
+        val list = listOf(4000, 8000, 12000, 16000)
+        list.forEach {
+            assertThat(it.isLeapYear()).isFalse()
+        }
+    }
+
 }
