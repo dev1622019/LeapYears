@@ -13,6 +13,14 @@ Java should be installed on the system
 #### Windows
 ```gradle.bat shadowJar```
 
+# Tests
+Run the tests with the following command:  
+#### Linux/OSX
+```./gradlew test```
+#### Windows
+```gradle.bat test```
+
+
 # Execution
 Run the following command:  
 ```java -jar build/libs/162-1.0-SNAPSHOT-all.jar```
