@@ -19,4 +19,12 @@ class LeapYearTest {
         }
     }
 
+    @Test
+    fun `years divisible by 4 but not by 100 are leap years`() {
+        val list = listOf(2008, 2012, 2016, 404, 360, 2064)
+        list.forEach {
+            assertThat(it.isLeapYear()).isTrue()
+        }
+    }
+
 }
